@@ -1,21 +1,14 @@
-/// <reference path="typings/tsd.d.ts" />
+/// <reference path="typings/main.d.ts" />
+import plugins = require("./smartpath.plugins");
+import SmartpathAbsolute = require("./smartpath.absolute");
 
-var path = require("path");
-var bl = require("beautylog");
 
 /**
  *
  * @type {{getPath: (function(any): undefined)}}
  */
-var smartpath:any = {
-    getAbsPath: function(varPath,logBool = false) {
-        var absPath = path.resolve(varPath);
-        if (logBool == true) {
-            bl.log('varPath is' + varPath);
-            bl.log('absPath is' + absPath);
-        }
-        return absPath;
-    }
+let smartpath = {
+
 };
 
 

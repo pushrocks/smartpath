@@ -1,11 +1,7 @@
 language: node_js
-before_install:
-- nvm install stable
-- node -v
-- npm -v
-- npm install -g gulp
-- npm install gulp
-- npm install gulp-typescript
+node_js:
+- 4.3.1
+- stable
 deploy:
   provider: npm
   email: npm@lossless.digital

@@ -8,8 +8,8 @@ import SmartpathAbsolute = require("./smartpath.absolute");
  * @type {{getPath: (function(any): undefined)}}
  */
 let smartpath = {
-
+    absolute: SmartpathAbsolute
 };
 
 
-module.exports = smartpath;
+export = smartpath;

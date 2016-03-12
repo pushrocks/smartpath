@@ -13,12 +13,12 @@ var makeAbsolute = function(localPathArg:string, baseArg?:string):string {
 
 var absolute = function(relativeArg:any, baseArg?:string):any {
     if(typeof relativeArg === "string"){
-        return makeAbsolute(relativeArg);
+        return makeAbsolute(relativeArg,baseArg);
     } else if(Array.isArray(relativeArg)){
         let relativeArray = relativeArg
-        let absoluteArray:string[];
+        let absoluteArray:string[] = [];
         for (let key in relativeArray){
-            absoluteArray.push(makeAbsolute(relativeArray[key]));
+            absoluteArray.push(makeAbsolute(relativeArray[key],baseArg));
         };
         return absoluteArray;
     } else {

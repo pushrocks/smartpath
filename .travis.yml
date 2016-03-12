@@ -1,16 +1,16 @@
 language: node_js
 before_install:
-  - nvm install stable
-  - node -v
-  - npm -v
-  - npm install -g gulp
-  - npm install gulp
-  - npm install gulp-typescript
+- nvm install stable
+- node -v
+- npm -v
+- npm install -g gulp
+- npm install gulp
+- npm install gulp-typescript
 deploy:
   provider: npm
-  email: npm@smart-coordination.com
+  email: npm@lossless.digital
   api_key:
-    secure: hfuRCg2RSNTvSe49w+rqx/fPt2OILDTjdYkga5BnGr0Rja5yL/2SpVNOP62lYNQBB61TfqfT8F4gQsQyAuygzhNT1ijZ4qCvSdqHqXki/0hzTVZAvfF2aoLxUnuCMAYawUyx5nibJKCmGXvH9MbMrEwV5Gh0uSf0HRmskp/GKuXw5epnMkOT2SEr9Mw7Hpu3VKLEALoKOI2hYBRv555sRFkI3Cd9v1n0384HEjCbQEwXhPwwki2XL2SXzGP8IOccE3xLK9zsQO2RDCqaKpIsK682ZtrvyqxmAJaivtO6VImkpBXcKniYOqJR6sWrsw5345er/iSSr30fgjw4I6LNyUcmF59Uw/dPAElvLN6jU6zxg/+GHM7xqz/J/HV3rlE4d20/9ZJB9IIm2761c3T7DraBMbA7ehj1lolTvCq1vx8oGbNEhkTVBj06V3ltdMPHMiNbeG2Tqs50h/lOgRy5+oqZ8ULWayWX1KXloM3LlddXJnnB31LzHbZUZw7m+q8QnfBlPCWuLd1JfluFrszr1YAR6YPciL9grBNV7beG+8wbh2G0gfMdCHZOzhDmoEHgt/y8liV0QdsFH6QLlEwt8UMPeZ8IO0sNYx5A2ffznZIzy9xEDmMySwl8J3/EdQxhS6FGrm000lu4BH+c2dVlCn/5va9fJLD+m6seSN8Yy40=
+    secure: C21gKjjg4W61RQlDo9vCjXjJ5NRvEoLuKe8IcKrTXEnn5R3ewnHfpgAQtXuBLvYuP6mIS6N2UxhcIo3BpsII1oOC4iJ4i3wqf6CH9hkmD1ejJe7qRiMKxltN0/4DHioySuolfcimKnOKSMGNQpOnze9lxqNi/qjUIgdsEY7soJRLIR9JQmhBBcRHoSzhxm6AnDmgEO75QsDIyhDH4wkWkOCOhRhjSfFNI6rm/om0XBRYkCKeNfz+Oqosnr8EkMVzsiRebLLXwZxzyCGSVFYQobtLxVqZDK5fvcz/GPyCbpDG/pZq5lxEkFYRiq+OmlIQn9Hz4C0i8VlXevS0ZatwS9iCGmG0/4ayUc2ksasY8o+bUfPJju0vKsCJJhtIj1e4GEj0ubisKirBOb5Oj8tMdf9RGLeNztFKRZEaM/ZoJ0gN//R9p4vWUZGMqJeIWh4I0hXA5Lv2OTUSl2h9bJ+Z678cb1k40w8bEVOij9GnUGQHybNwXV+8LZckap29/XDxguxtnYnuoX7L/dUfjkhK6JQRS9c7NDWOSzsnsy5kx0jHNaHac7vxMzmbdSRK71rNkzudtu2ECxONDc8aUNJLmUfL1tgYWt9/t9ramBqtmpp3w0S+s82PDHtoxAn02lWi2pz8pSp9ACP105qtUD9/1TCWtQUbYoL00QhFmlKzWwg=
   on:
     tags: true
     repo: pushrocks/smartpath

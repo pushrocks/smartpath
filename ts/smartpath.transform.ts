@@ -1,7 +1,10 @@
 /// <reference path="typings/main.d.ts" />
 import plugins = require("./smartpath.plugins");
 
-var makeAbsolute = function(localPathArg:string, baseArg?:string):string {
+/* ------------------------------------------ *
+ * ------------ helpers --------------------- *
+ * ------------------------------------------ */
+let makeAbsolute = function(localPathArg:string, baseArg?:string):string {
     let absolutePath:string;
     if(baseArg){
         absolutePath = plugins.path.join(baseArg,localPathArg);
@@ -11,7 +14,10 @@ var makeAbsolute = function(localPathArg:string, baseArg?:string):string {
     return absolutePath;
 };
 
-var absolute = function(relativeArg:any, baseArg?:string):any {
+/* ------------------------------------------ *
+ * ------- export functions ----------------- *
+ * ------------------------------------------ */
+export let toAbsolute = function(relativeArg:any, baseArg?:string):any {
     if(typeof relativeArg === "string"){
         return makeAbsolute(relativeArg,baseArg);
     } else if(Array.isArray(relativeArg)){
@@ -27,5 +33,3 @@ var absolute = function(relativeArg:any, baseArg?:string):any {
         return false;
     }
 };
-
-export = absolute;

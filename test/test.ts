@@ -15,7 +15,7 @@ describe("smartpath",function(){
                 smartpath.transform.toAbsolute(relativeString,baseString).should.equal("/basedir/somedir/somefile.txt");
             });
             it("should make an array of relative Strings an Array of absolute Strings",function(){
-                let absoluteArray = smartpath.transform.toAbsolute(relativeArray);
+                let absoluteArray = smartpath.transform.toAbsolute(relativeArray,baseString);
                 absoluteArray[2].should.startWith("/");
                 absoluteArray[2].should.endWith(relativeString2);
 

@@ -22,10 +22,11 @@
   },
   "homepage": "https://github.com/pushrocks/smartpath",
   "dependencies": {
-    "beautylog": "^3.1.2"
+    "beautylog": "^3.1.2",
+    "home": "^1.0.1"
   },
   "devDependencies": {
-    "npmts": "^3.6.3",
+    "npmts": "^4.0.1",
     "should": "^8.3.0"
   }
 }

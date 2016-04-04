@@ -36,5 +36,13 @@ describe("smartpath",function(){
                 smartpath.get.type("./some/relative/path/").should.not.equal("url");
             });
         });
+        describe(".get()",function(){
+            it("should a absolute path for an home relative URL",function(){
+                console.log(smartpath.get.home("~/test"));
+            });
+            it("should return the home directory path when no argument is specified",function(){
+                console.log(smartpath.get.home());
+            });
+        });
     });
 });

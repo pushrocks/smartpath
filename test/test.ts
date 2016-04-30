@@ -3,6 +3,35 @@ let should = require("should");
 let smartpath = require("../dist/index.js");
 
 describe("smartpath",function(){
+    describe(".check",function(){
+        let filePathString = "./somedir/somefile.json"
+        let dirPathString = "./somedir/anotherdir"
+        let dirPathString2 = "./somedir/another.dir/"
+        describe(".isFile",function(){
+            it("should be true for a file path",function(){
+                smartpath.check.isFile(filePathString)
+                    .should.be.true();
+            });
+            it("should be false for a directory path",function(){
+                smartpath.check.isFile(dirPathString)
+                    .should.be.false();
+                smartpath.check.isFile(dirPathString2)
+                    .should.be.false();
+            });
+        });
+        describe(".isDir",function(){
+            it("should be true for a directory path",function(){
+                smartpath.check.isDir(dirPathString)
+                    .should.be.true();
+                smartpath.check.isDir(dirPathString2)
+                    .should.be.true();
+            });
+            it("should be false for a file path",function(){
+                smartpath.check.isDir(filePathString)
+                    .should.be.false();
+            });
+        });
+    });
     describe(".transform",function(){
         describe("toAbsolute()",function(){
             let baseString = "/basedir";

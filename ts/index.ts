@@ -1,16 +1,17 @@
 /// <reference path="typings/main.d.ts" />
 import plugins = require("./smartpath.plugins");
-import SmartpathTransform = require("./smartpath.transform");
+import SmartpathCheck = require("./smartpath.check");
 import SmartpathGet = require("./smartpath.get");
+import SmartpathTransform = require("./smartpath.transform");
 
 /**
  *
  * @type {{getPath: (function(any): undefined)}}
  */
 let smartpath = {
-    transform: SmartpathTransform,
-    get: SmartpathGet
-
+    check: SmartpathCheck,
+    get: SmartpathGet,
+    transform: SmartpathTransform
 };
 
 

@@ -3,6 +3,7 @@
   "version": "3.1.5",
   "description": "offers smart ways to handle paths",
   "main": "dist/index.js",
+  "typings":"dist/index.d.ts",
   "scripts": {
     "test": "(npmts)"
   },
@@ -26,7 +27,7 @@
     "home": "^1.0.1"
   },
   "devDependencies": {
-    "npmts": "^5.0.4",
+    "npmts": "^5.1.0",
     "should": "^8.3.1"
   }
 }

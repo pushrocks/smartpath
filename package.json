@@ -27,7 +27,7 @@
     "home": "^1.0.1"
   },
   "devDependencies": {
-    "npmts": "^5.1.0",
+    "npmts": "^5.1.4",
     "should": "^8.3.1"
   }
 }

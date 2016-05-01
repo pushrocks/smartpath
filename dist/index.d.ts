@@ -1,4 +1,3 @@
-/// <reference path="typings/main.d.ts" />
 import SmartpathCheck = require("./smartpath.check");
 import SmartpathGet = require("./smartpath.get");
 import SmartpathTransform = require("./smartpath.transform");

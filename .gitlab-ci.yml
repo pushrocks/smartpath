@@ -1,0 +1,40 @@
+image: hosttoday/ht-docker-node:latest
+
+stages:
+  - test
+  - release
+  - page
+
+testLTS:
+  stage: test
+  script:
+    - npmci test lts
+  tags:
+    - docker
+    
+testSTABLE:
+  stage: test
+  script:
+    - npmci test stable
+  tags:
+    - docker
+
+release:
+  stage: release
+  script:
+    - npmci publish
+  only:
+    - tags
+  tags:
+    - docker
+    
+pages:
+  stage: page
+  script:
+  - mkdir public
+  - npmci npmpage
+  artifacts:
+    paths:
+    - public
+  only:
+  - tags

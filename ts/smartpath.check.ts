@@ -1,4 +1,5 @@
-import plugins = require("./smartpath.plugins");
+import "typings-global";
+import * as plugins from "./smartpath.plugins";
 
 export let isDir = function(pathArg:string){
     return !isFile(pathArg);

@@ -1,5 +1,5 @@
-/// <reference path="typings/main.d.ts" />
-import plugins = require("./smartpath.plugins");
+import "typings-global";
+import * as plugins from "./smartpath.plugins";
 
 /* ------------------------------------------ *
  * ------------ helpers --------------------- *

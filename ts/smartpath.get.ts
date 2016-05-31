@@ -1,5 +1,5 @@
-/// <reference path="typings/main.d.ts" />
-import plugins = require("./smartpath.plugins");
+import "typings-global";
+import * as plugins from "./smartpath.plugins";
 
 /**
  * returns the type of the given path. Can be "url" or "local"

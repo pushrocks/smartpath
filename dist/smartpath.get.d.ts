@@ -1,3 +1,4 @@
+import "typings-global";
 /**
  * returns the type of the given path. Can be "url" or "local"
  */

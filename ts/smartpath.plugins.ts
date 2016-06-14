@@ -1,5 +1,5 @@
-/// <reference path="./typings/main.d.ts" />
-export var beautylog = require ("beautylog");
+import "typings-global";
+export import beautylog = require ("beautylog");
 export var home = require("home");
-export var path = require("path");
+export import path = require("path");
 

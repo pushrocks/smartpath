@@ -1,5 +1,5 @@
-/// <reference path="../ts/typings/main.d.ts" />
-let should = require("should");
+import "typings-test";
+import "should";
 let smartpath = require("../dist/index.js");
 
 describe("smartpath",function(){

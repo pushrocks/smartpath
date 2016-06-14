@@ -1,3 +1,4 @@
+import "typings-global";
 import SmartpathCheck = require("./smartpath.check");
 import SmartpathGet = require("./smartpath.get");
 import SmartpathTransform = require("./smartpath.transform");

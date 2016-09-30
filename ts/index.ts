@@ -1,8 +1,10 @@
-import "typings-global";
-import plugins = require("./smartpath.plugins");
-import SmartpathCheck = require("./smartpath.check");
-import SmartpathGet = require("./smartpath.get");
-import SmartpathTransform = require("./smartpath.transform");
+import 'typings-global'
+import plugins = require('./smartpath.plugins')
+
+// import modules
+import SmartpathCheck = require('./smartpath.check')
+import SmartpathGet = require('./smartpath.get')
+import SmartpathTransform = require('./smartpath.transform')
 
 /**
  *
@@ -12,7 +14,6 @@ let smartpath = {
     check: SmartpathCheck,
     get: SmartpathGet,
     transform: SmartpathTransform
-};
+}
 
-
-export = smartpath;
+export = smartpath

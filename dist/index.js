@@ -1,17 +1,17 @@
 "use strict";
 require("typings-global");
-var SmartpathCheck = require("./smartpath.check");
-var SmartpathGet = require("./smartpath.get");
-var SmartpathTransform = require("./smartpath.transform");
+// import modules
+const SmartpathCheck = require("./smartpath.check");
+const SmartpathGet = require("./smartpath.get");
+const SmartpathTransform = require("./smartpath.transform");
 /**
  *
  * @type {{getPath: (function(any): undefined)}}
  */
-var smartpath = {
+let smartpath = {
     check: SmartpathCheck,
     get: SmartpathGet,
     transform: SmartpathTransform
 };
 module.exports = smartpath;
-
-//# sourceMappingURL=data:application/json;charset=utf8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImluZGV4LnRzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFBQSxRQUFPLGdCQUFnQixDQUFDLENBQUE7QUFFeEIsSUFBTyxjQUFjLFdBQVcsbUJBQW1CLENBQUMsQ0FBQztBQUNyRCxJQUFPLFlBQVksV0FBVyxpQkFBaUIsQ0FBQyxDQUFDO0FBQ2pELElBQU8sa0JBQWtCLFdBQVcsdUJBQXVCLENBQUMsQ0FBQztBQUU3RDs7O0dBR0c7QUFDSCxJQUFJLFNBQVMsR0FBRztJQUNaLEtBQUssRUFBRSxjQUFjO0lBQ3JCLEdBQUcsRUFBRSxZQUFZO0lBQ2pCLFNBQVMsRUFBRSxrQkFBa0I7Q0FDaEMsQ0FBQztBQUdGLGlCQUFTLFNBQVMsQ0FBQyIsImZpbGUiOiJpbmRleC5qcyIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCBcInR5cGluZ3MtZ2xvYmFsXCI7XG5pbXBvcnQgcGx1Z2lucyA9IHJlcXVpcmUoXCIuL3NtYXJ0cGF0aC5wbHVnaW5zXCIpO1xuaW1wb3J0IFNtYXJ0cGF0aENoZWNrID0gcmVxdWlyZShcIi4vc21hcnRwYXRoLmNoZWNrXCIpO1xuaW1wb3J0IFNtYXJ0cGF0aEdldCA9IHJlcXVpcmUoXCIuL3NtYXJ0cGF0aC5nZXRcIik7XG5pbXBvcnQgU21hcnRwYXRoVHJhbnNmb3JtID0gcmVxdWlyZShcIi4vc21hcnRwYXRoLnRyYW5zZm9ybVwiKTtcblxuLyoqXG4gKlxuICogQHR5cGUge3tnZXRQYXRoOiAoZnVuY3Rpb24oYW55KTogdW5kZWZpbmVkKX19XG4gKi9cbmxldCBzbWFydHBhdGggPSB7XG4gICAgY2hlY2s6IFNtYXJ0cGF0aENoZWNrLFxuICAgIGdldDogU21hcnRwYXRoR2V0LFxuICAgIHRyYW5zZm9ybTogU21hcnRwYXRoVHJhbnNmb3JtXG59O1xuXG5cbmV4cG9ydCA9IHNtYXJ0cGF0aDtcbiJdfQ==
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi90cy9pbmRleC50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQUEsMEJBQXVCO0FBR3ZCLGlCQUFpQjtBQUNqQixvREFBb0Q7QUFDcEQsZ0RBQWdEO0FBQ2hELDREQUE0RDtBQUU1RDs7O0dBR0c7QUFDSCxJQUFJLFNBQVMsR0FBRztJQUNaLEtBQUssRUFBRSxjQUFjO0lBQ3JCLEdBQUcsRUFBRSxZQUFZO0lBQ2pCLFNBQVMsRUFBRSxrQkFBa0I7Q0FDaEMsQ0FBQTtBQUVELGlCQUFTLFNBQVMsQ0FBQSJ9

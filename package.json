@@ -23,13 +23,13 @@
   },
   "homepage": "https://github.com/pushrocks/smartpath",
   "dependencies": {
-    "beautylog": "^5.0.10",
+    "beautylog": "^5.0.23",
     "home": "^1.0.1",
-    "typings-global": "^1.0.3"
+    "typings-global": "^1.0.14"
   },
   "devDependencies": {
-    "npmts-g": "^5.2.6",
-    "should": "^9.0.2",
-    "typings-test": "^1.0.1"
+    "npmts-g": "^5.2.8",
+    "should": "^11.1.0",
+    "typings-test": "^1.0.3"
   }
 }

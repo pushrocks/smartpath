@@ -1,8 +1,4 @@
 node_modules/
-.settings/
-.idea/
-docs/
-ts/typings/
-ts/**/*.js
-ts/**/*.js.map
 coverage/
+pages/
+public/

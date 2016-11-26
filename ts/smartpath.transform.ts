@@ -33,7 +33,7 @@ export let toAbsolute = function(relativeArg: string | string[], baseArg?: strin
         }
         return absoluteArray
     } else {
-        plugins.beautylog.error('smartpath.absolute() could not make sense of the input. ' +
+        console.error('smartpath.absolute() could not make sense of the input. ' +
             'Input is neither String nor Array')
         return false
     }

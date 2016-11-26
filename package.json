@@ -1,6 +1,6 @@
 {
   "name": "smartpath",
-  "version": "3.2.5",
+  "version": "3.2.6",
   "description": "offers smart ways to handle paths",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",

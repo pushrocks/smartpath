@@ -1,7 +1,7 @@
 // import modules
-import check = require('./smartpath.check')
-import get = require('./smartpath.get')
-import transform = require('./smartpath.transform')
+import * as check from './smartpath.check'
+import * as get from './smartpath.get'
+import * as transform from './smartpath.transform'
 
 
 export {

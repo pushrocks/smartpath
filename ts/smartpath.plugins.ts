@@ -1,3 +1,8 @@
 import 'typings-global'
-export var home = require('home')
-export import path = require('path')
+let home = require('home')
+import * as path from 'path'
+
+export {
+  home,
+  path
+}

@@ -1,4 +1,3 @@
-import 'typings-global';
 import plugins = require('./smartpath.plugins');
 
 /* ------------------------------------------ *

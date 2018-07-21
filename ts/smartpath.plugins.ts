@@ -1,8 +1,4 @@
-import 'typings-global'
-let home = require('home')
-import * as path from 'path'
+import * as os from 'os';
+import * as path from 'path';
 
-export {
-  home,
-  path
-}
+export { os, path };

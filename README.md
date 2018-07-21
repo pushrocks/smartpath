@@ -1,13 +1,16 @@
 # smartpath
+
 offers smart ways to handle paths
 
 ## Availabililty
+
 [![npm](https://pushrocks.gitlab.io/assets/repo-button-npm.svg)](https://www.npmjs.com/package/smartpath)
 [![git](https://pushrocks.gitlab.io/assets/repo-button-git.svg)](https://GitLab.com/pushrocks/smartpath)
 [![git](https://pushrocks.gitlab.io/assets/repo-button-mirror.svg)](https://github.com/pushrocks/smartpath)
 [![docs](https://pushrocks.gitlab.io/assets/repo-button-docs.svg)](https://pushrocks.gitlab.io/smartpath/)
 
 ## Status for master
+
 [![build status](https://GitLab.com/pushrocks/smartpath/badges/master/build.svg)](https://GitLab.com/pushrocks/smartpath/commits/master)
 [![coverage report](https://GitLab.com/pushrocks/smartpath/badges/master/coverage.svg)](https://GitLab.com/pushrocks/smartpath/commits/master)
 [![npm downloads per month](https://img.shields.io/npm/dm/smartpath.svg)](https://www.npmjs.com/package/smartpath)
@@ -19,6 +22,7 @@ offers smart ways to handle paths
 [![JavaScript Style Guide](https://img.shields.io/badge/code%20style-standard-brightgreen.svg)](http://standardjs.com/)
 
 ## Usage
+
 Use TypeScript for best in class instellisense.
 
 For further information read the linked docs at the top of this README.

@@ -1,11 +1,13 @@
 {
-  "name": "smartpath",
+  "name": "@pushrocks/smartpath",
   "version": "3.2.8",
+  "private": false,
   "description": "offers smart ways to handle paths",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
   "scripts": {
-    "test": "(npmts)"
+    "test": "tsrun test/test.ts",
+    "build": "(npmts)"
   },
   "repository": {
     "type": "git",
@@ -22,13 +24,10 @@
     "url": "https://github.com/pushrocks/smartpath/issues"
   },
   "homepage": "https://github.com/pushrocks/smartpath",
-  "dependencies": {
-    "home": "^1.0.1",
-    "typings-global": "^1.0.14"
-  },
+  "dependencies": {},
   "devDependencies": {
-    "npmts-g": "^6.0.0",
-    "smartchai": "^1.0.3",
-    "typings-test": "^1.0.3"
+    "@gitzone/tsrun": "^1.1.9",
+    "@pushrocks/tapbundle": "^3.0.1",
+    "@types/node": "^10.5.2"
   }
 }

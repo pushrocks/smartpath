@@ -3,11 +3,11 @@
   "version": "4.0.1",
   "private": false,
   "description": "offers smart ways to handle paths",
-  "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "main": "dist_ts/index.js",
+  "typings": "dist_ts/index.d.ts",
   "scripts": {
-    "test": "tsrun test/test.ts",
-    "build": "(npmts)"
+    "test": "(tstest test)",
+    "build": "(tsbuild)"
   },
   "repository": {
     "type": "git",
@@ -26,8 +26,22 @@
   "homepage": "https://github.com/pushrocks/smartpath",
   "dependencies": {},
   "devDependencies": {
-    "@gitzone/tsrun": "^1.1.9",
-    "@pushrocks/tapbundle": "^3.0.1",
+    "@gitzone/tsbuild": "^2.1.17",
+    "@gitzone/tsrun": "^1.2.8",
+    "@gitzone/tstest": "^1.0.28",
+    "@pushrocks/tapbundle": "^3.2.0",
     "@types/node": "^10.5.2"
-  }
+  },
+  "files": [
+    "ts/**/*",
+    "ts_web/**/*",
+    "dist/**/*",
+    "dist_*/**/*",
+    "dist_ts/**/*",
+    "dist_ts_web/**/*",
+    "assets/**/*",
+    "cli.js",
+    "npmextra.json",
+    "readme.md"
+  ]
 }

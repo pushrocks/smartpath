@@ -1,16 +1,16 @@
-# gitzone standard
-image: hosttoday/ht-docker-node:npmci
+# gitzone ci_default
+image: registry.gitlab.com/hosttoday/ht-docker-node:npmci
 
 cache:
   paths:
-  - .npmci_cache/
-  key: "$CI_BUILD_STAGE"
+    - .npmci_cache/
+  key: '$CI_BUILD_STAGE'
 
 stages:
-- security
-- test
-- release
-- metadata
+  - security
+  - test
+  - release
+  - metadata
 
 # ====================
 # security stage
@@ -18,109 +18,104 @@ stages:
 mirror:
   stage: security
   script:
-  - npmci git mirror
+    - npmci git mirror
   tags:
-  - docker
-  - notpriv
+    - lossless
+    - docker
+    - notpriv
 
-snyk:
+audit:
+  image: registry.gitlab.com/hosttoday/ht-docker-node:npmci
   stage: security
   script:
-    - npmci command npm install -g snyk
+    - npmci npm prepare
     - npmci command npm install --ignore-scripts
-    - npmci command snyk test
+    - npmci command npm config set registry https://registry.npmjs.org
+    - npmci command npm audit --audit-level=high
   tags:
-  - docker
-  - notpriv
+    - lossless
+    - docker
+    - notpriv
 
 # ====================
 # test stage
 # ====================
-testLEGACY:
-  stage: test
-  script:
-  - npmci node install legacy
-  - npmci npm install
-  - npmci npm test
-  coverage: /\d+.?\d+?\%\s*coverage/
-  tags:
-  - docker
-  - notpriv
-  allow_failure: true
 
-testLTS:
+testStable:
   stage: test
   script:
-  - npmci node install lts
-  - npmci npm install
-  - npmci npm test
+    - npmci npm prepare
+    - npmci node install stable
+    - npmci npm install
+    - npmci npm test
   coverage: /\d+.?\d+?\%\s*coverage/
   tags:
-  - docker
-  - notpriv
-    
-testSTABLE:
+    - lossless
+    - docker
+    - priv
+
+testBuild:
   stage: test
   script:
-  - npmci node install stable
-  - npmci npm install
-  - npmci npm test
+    - npmci npm prepare
+    - npmci node install stable
+    - npmci npm install
+    - npmci command npm run build
   coverage: /\d+.?\d+?\%\s*coverage/
   tags:
-  - docker
-  - notpriv
+    - lossless
+    - docker
+    - notpriv
 
 release:
   stage: release
   script:
-  - npmci node install stable
-  - npmci npm publish
+    - npmci node install stable
+    - npmci npm publish
   only:
-  - tags
+    - tags
   tags:
-  - docker
-  - notpriv
+    - lossless
+    - docker
+    - notpriv
 
 # ====================
 # metadata stage
 # ====================
 codequality:
   stage: metadata
-  image: docker:stable
   allow_failure: true
-  services:
-    - docker:stable-dind
   script:
-    - export SP_VERSION=$(echo "$CI_SERVER_VERSION" | sed 's/^\([0-9]*\)\.\([0-9]*\).*/\1-\2-stable/')
-    - docker run
-        --env SOURCE_CODE="$PWD"
-        --volume "$PWD":/code
-        --volume /var/run/docker.sock:/var/run/docker.sock
-        "registry.gitlab.com/gitlab-org/security-products/codequality:$SP_VERSION" /code
-  artifacts:
-    paths: [codeclimate.json]
+    - npmci command npm install -g tslint typescript
+    - npmci npm prepare
+    - npmci npm install
+    - npmci command "tslint -c tslint.json ./ts/**/*.ts"
   tags:
-  - docker
-  - priv
+    - lossless
+    - docker
+    - priv
 
 trigger:
   stage: metadata
   script:
-  - npmci trigger
+    - npmci trigger
   only:
-  - tags
+    - tags
   tags:
-  - docker
-  - notpriv
+    - lossless
+    - docker
+    - notpriv
 
 pages:
-  image: hosttoday/ht-docker-node:npmci
   stage: metadata
   script:
-    - npmci command npm install -g typedoc typescript
+    - npmci node install lts
+    - npmci command npm install -g @gitzone/tsdoc
+    - npmci npm prepare
     - npmci npm install
-    - npmci command typedoc --module "commonjs" --target "ES2016" --out public/ ts/
+    - npmci command tsdoc
   tags:
+    - lossless
     - docker
     - notpriv
   only:
@@ -128,15 +123,5 @@ pages:
   artifacts:
     expire_in: 1 week
     paths:
-    - public
-  allow_failure: true
-
-windowsCompatibility:
-  image: stefanscherer/node-windows:10-build-tools
-  stage: metadata
-  script:
-  - npm install & npm test
-  coverage: /\d+.?\d+?\%\s*coverage/
-  tags:
-  - windows
+      - public
   allow_failure: true

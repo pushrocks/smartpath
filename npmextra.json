@@ -4,5 +4,16 @@
       "@gitzone/npmts"
     ],
     "npmAccessLevel": "public"
+  },
+  "gitzone": {
+    "projectType": "npm",
+    "module": {
+      "githost": "gitlab.com",
+      "gitscope": "pushrocks",
+      "gitrepo": "smartpath",
+      "shortDescription": "offers smart ways to handle paths",
+      "npmPackagename": "@pushrocks/smartpath",
+      "license": "MIT"
+    }
   }
 }

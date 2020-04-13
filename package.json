@@ -26,11 +26,11 @@
   "homepage": "https://github.com/pushrocks/smartpath",
   "dependencies": {},
   "devDependencies": {
-    "@gitzone/tsbuild": "^2.1.17",
+    "@gitzone/tsbuild": "^2.1.22",
     "@gitzone/tsrun": "^1.2.8",
     "@gitzone/tstest": "^1.0.28",
-    "@pushrocks/tapbundle": "^3.2.0",
-    "@types/node": "^10.5.2"
+    "@pushrocks/tapbundle": "^3.2.1",
+    "@types/node": "^13.11.1"
   },
   "files": [
     "ts/**/*",

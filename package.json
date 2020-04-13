@@ -1,6 +1,6 @@
 {
   "name": "@pushrocks/smartpath",
-  "version": "4.0.2",
+  "version": "4.0.3",
   "private": false,
   "description": "offers smart ways to handle paths",
   "main": "dist_ts/index.js",
